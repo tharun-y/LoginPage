@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx kill-port 5000 && npm install -g cross-env && cross-env NODE_ENV=production node server.js",
-    "dev": " npm install -g cross-env && cross-env NODE_ENV=development nodemon server.js",
-    "build": "npm install && npm install --prefix ../Frontend && npm run build --prefix ../Frontend"
+    "start": "npx kill-port 5000 && cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "build": "npm install && npm install --prefix ../Frontend && npm run build --prefix ../Frontend",
+    "postinstall": "npm install --prefix ../Frontend && npm run build --prefix ../Frontend"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   "dependencies": {
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.7",
+    "express": "^4.17.1",  
     "mongoose": "^8.9.5"
   },
   "devDependencies": {
