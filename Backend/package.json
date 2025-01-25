@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx kill-port 5000 && npm install cross-env && cross-env NODE_ENV=production node server.js",
-    "dev": " npm install cross-env && cross-env NODE_ENV=development nodemon server.js",
+    "start": "npx kill-port 5000 && npm install -g cross-env && cross-env NODE_ENV=production node server.js",
+    "dev": " npm install -g cross-env && cross-env NODE_ENV=development nodemon server.js",
     "build": "npm install && npm install --prefix ../Frontend && npm run build --prefix ../Frontend"
   },
   "keywords": [],
